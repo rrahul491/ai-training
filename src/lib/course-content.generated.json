@@ -1,0 +1,411 @@
+{
+  "title": "AI at Work: Foundations, Safe Use and What's Next",
+  "minutes": 39,
+  "welcome": "AI is becoming part of how organisations find information, create content and improve everyday work. It can help us explore ideas and complete some tasks more efficiently. It can also make mistakes or expose information if we use it carelessly.\n\nThis training will help you use AI with confidence and good judgment. You do not need a technical background. You'll learn what AI can do, how to ask for useful help, what to check before sharing information, and when a person needs to review or approve an action.\n\nComplete the four sections and short check in each module, then take the final assessment. You can return to earlier sections and resume your progress later.\n\n**Opening reflection — optional, not scored:** Which task takes time in your role: finding information, writing, analysing, organising or another task? Keep it in mind throughout the course. Do not enter confidential information into this reflection.",
+  "modules": [
+    {
+      "title": "AI at work: what and why",
+      "sections": [
+        {
+          "number": "1.1",
+          "title": "Why is AI being introduced?",
+          "body": "AI can help employees spend less time on repetitive work and more time on judgment, collaboration and problem-solving. For example, it can suggest a first draft, organise notes that are permitted for the tool, or help explain a technical idea in simpler language.\n\nAI is introduced to support work—not to remove responsibility for its quality. The organisation decides which tools and uses are approved. Employees remain responsible for following policy and checking their work."
+        },
+        {
+          "number": "1.2",
+          "title": "What is AI and what is generative AI?",
+          "body": "Artificial intelligence is a broad term for computer systems that perform tasks commonly associated with human intelligence, such as recognising patterns or generating language. Not every AI system works in the same way.\n\nGenerative AI creates new content in response to an instruction, often called a **prompt**. Depending on the tool, it can generate or transform text, images, audio, video or code. A useful response is not a guarantee that its facts, sources or recommendations are correct."
+        },
+        {
+          "number": "1.3",
+          "title": "What is a model?",
+          "body": "An AI **model** is the trained system that processes an input and produces an output. A large language model, or **LLM**, is a model designed to work with language. An AI product or assistant may combine one or more models with an interface, company data or other tools.\n\nModels differ in capabilities and limitations. The model name alone does not tell you whether a particular product, account, data type or business use has been approved by your organisation."
+        },
+        {
+          "number": "1.4",
+          "title": "What are tokens and context?",
+          "body": "Models process text in pieces called **tokens**. A token might be part of a word, a whole word or punctuation; there is no universal conversion between words and tokens. A **context window** is the amount of information a model can consider at once. Long conversations or documents may exceed that limit, and some material may be omitted or summarised.\n\nPractical takeaway: provide only the relevant, permitted context; do not assume the tool remembers everything or that more context is always better. Depending on the service, usage may also affect cost."
+        }
+      ],
+      "check": {
+        "prompt": "What best describes generative AI?",
+        "options": [
+          {
+            "text": "A system that always knows what is true.",
+            "correct": false
+          },
+          {
+            "text": "A tool that can generate content from instructions but still requires human review.",
+            "correct": true
+          },
+          {
+            "text": "A person who can approve business decisions.",
+            "correct": false
+          }
+        ],
+        "feedback": "Generative AI produces useful content, but its output can be wrong or incomplete. A person remains accountable for its use."
+      }
+    },
+    {
+      "title": "Getting useful results",
+      "sections": [
+        {
+          "number": "2.1",
+          "title": "Where can AI help?",
+          "body": "Subject to your organisation's rules, AI can help brainstorm an agenda, rewrite a public-facing draft, explain a concept, organise permitted notes, translate text or suggest a spreadsheet formula. It can also help you generate questions to ask an expert.\n\nChoose a task with a clear result and start with information approved for the tool. Avoid using AI as the sole decision-maker for important decisions about people, customers, finances, safety or legal matters."
+        },
+        {
+          "number": "2.2",
+          "title": "Build a useful prompt",
+          "body": "A good prompt gives the tool a clear **task**, relevant **context**, the desired **format**, and any **constraints**. Provide only information you are allowed to share. You can ask for uncertainty to be flagged and refine the result in a follow-up.\n\n**Example using fictional, non-sensitive information:**\n\n> Create a 30-minute team meeting agenda for a fictional project kickoff. Include objectives, three discussion topics and five minutes for next steps. Use a concise bullet list. Do not invent project facts."
+        },
+        {
+          "number": "2.3",
+          "title": "Improve a response",
+          "body": "Treat the first answer as a draft. Ask for a shorter version, a different audience, missing questions or an alternative approach. If the tool makes an assumption, correct it with information you are permitted to provide. Do not add confidential detail just to make an answer sound more specific."
+        },
+        {
+          "number": "2.4",
+          "title": "Review before using",
+          "body": "Read the output and check important claims against reliable, authorised sources. Look for invented citations, incorrect numbers, missing context, confidential details and wording that could mislead or disadvantage someone. Edit it, seek appropriate review and follow any disclosure requirements before sharing or acting."
+        }
+      ],
+      "check": {
+        "prompt": "You use an approved AI tool to draft a summary of public material. What should you do before sending it to colleagues?",
+        "options": [
+          {
+            "text": "Send it immediately because the tool is approved.",
+            "correct": false
+          },
+          {
+            "text": "Review the summary and verify important claims against the original material.",
+            "correct": true
+          },
+          {
+            "text": "Ask the tool if it is correct and accept its answer.",
+            "correct": false
+          }
+        ],
+        "feedback": "Approval allows a tool to be used within its permitted scope; it does not guarantee that every output is correct."
+      }
+    },
+    {
+      "title": "Protecting data and using approved tools",
+      "sections": [
+        {
+          "number": "3.1",
+          "title": "Check the tool and use case",
+          "body": "Before using AI for work, check **[APPROVED AI TOOL LIST]** and **[AI USE POLICY]**. Confirm the particular product, account, feature and intended use are permitted. A personal or free account is not automatically equivalent to an approved enterprise account, even if both show the same product name.\n\nIf you cannot find an approved option for your task, ask **[APPROVAL OR SUPPORT CONTACT]**. Do not work around the approval process by switching accounts or tools."
+        },
+        {
+          "number": "3.2",
+          "title": "Decide what information can be shared",
+          "body": "Approval is specific to the data, tool, account, feature and use case. A public fact is generally a lower-risk starting point, but public information can still have copyright, licensing or contractual restrictions. An approved tool is not automatically approved for every category of information.\n\nUse **[DATA CLASSIFICATION POLICY]** to check the material. Unless the organisation has explicitly authorised the specific handling, do not enter passwords, API keys, confidential company information, customer or employee personal data, financial records, source code, contracts or regulated information. The same care applies to uploaded files, images, meeting recordings and connected apps—not just typed prompts."
+        },
+        {
+          "number": "3.3",
+          "title": "Reduce what you share",
+          "body": "Use the minimum information needed. Consider a fictional example, aggregation or removal of identifying details, where policy permits. Redaction alone does not automatically make information anonymous or safe: people or projects may still be identifiable from context. If you are unsure whether information is permitted, stop and check.\n\nBefore connecting an AI assistant to email, drives or other systems, check the requested permissions and follow **[INTEGRATION APPROVAL PROCESS]**. A connection can expose more information than one prompt."
+        },
+        {
+          "number": "3.4",
+          "title": "Retention, sharing and incidents",
+          "body": "Understand the organisation-approved settings for storing conversations, retaining files, training models, sharing links and granting access. These settings vary by product and account; do not assume that a prompt is private or that deleting a conversation removes every copy.\n\nIf you think you entered or exposed information incorrectly, stop using the affected workflow and promptly contact **[SECURITY / PRIVACY REPORTING CHANNEL]**. Follow the response team's instructions; don't conceal the mistake or attempt unapproved cleanup."
+        }
+      ],
+      "check": {
+        "prompt": "A colleague asks you to paste a customer contract into a personal AI account for a quick summary. Choose the best first action:",
+        "options": [
+          {
+            "text": "Paste it because summarising saves time.",
+            "correct": false
+          },
+          {
+            "text": "Stop and check the approved tool, data handling rules and permitted use; ask the appropriate team if uncertain.",
+            "correct": true
+          },
+          {
+            "text": "Remove the customer's name and paste the rest into any tool.",
+            "correct": false
+          }
+        ],
+        "feedback": "A contract can contain sensitive or identifying details beyond a name. Check authorisation and data handling requirements before sharing."
+      }
+    },
+    {
+      "title": "Risks and responsible decisions",
+      "sections": [
+        {
+          "number": "4.1",
+          "title": "Inaccurate or invented output",
+          "body": "An AI response can sound confident while containing invented facts, citations, dates, calculations or quotations. This is often called a **hallucination**. The tool may also miss important context or use outdated information. Asking it to confirm its own answer is not an independent check.\n\nFor important work, verify claims in the original, trustworthy sources. Ask a qualified person to review specialised or high-impact content."
+        },
+        {
+          "number": "4.2",
+          "title": "Bias and fairness",
+          "body": "AI can reproduce or amplify unfair patterns. A draft job description, customer message or recommendation may make inappropriate assumptions about a person's background or abilities. Check language, context and outcomes for bias; involve the appropriate owner for decisions affecting people.\n\nDo not use AI output as the sole basis for decisions about hiring, performance, promotion or other significant matters. Follow the organisation's applicable human review process."
+        },
+        {
+          "number": "4.3",
+          "title": "Untrusted instructions and prompt injection",
+          "body": "An AI assistant may read pages, documents, messages or other material containing instructions from someone else. A malicious or misleading instruction might tell it to ignore its task, disclose information or take an unrelated action. This is a form of **prompt injection**.\n\nTreat unexpected instructions in external content as untrusted. If an assistant asks for credentials, changes the task unexpectedly, or proposes an unrelated action, stop and report it through **[SECURITY CHANNEL]**. Do not rely on a prompt alone as a security control."
+        },
+        {
+          "number": "4.4",
+          "title": "Accountability and transparency",
+          "body": "You own the work you submit or act on. Check that the result is accurate, appropriate and permitted; respect confidentiality, intellectual property and applicable policies. Disclose AI assistance when required by **[DISCLOSURE POLICY]** or the circumstances of your work. If a decision could significantly affect someone, involve the authorised human decision-maker."
+        }
+      ],
+      "check": {
+        "prompt": "An AI-generated report cites a convincing source you cannot find. What should you do?",
+        "options": [
+          {
+            "text": "Keep the citation because the report sounds professional.",
+            "correct": false
+          },
+          {
+            "text": "Verify the claim using reliable sources and remove or correct unsupported material.",
+            "correct": true
+          },
+          {
+            "text": "Ask the same AI whether the source exists and use its answer as proof.",
+            "correct": false
+          }
+        ],
+        "feedback": "AI can generate plausible but false citations. Verification requires an appropriate source outside the answer itself."
+      }
+    },
+    {
+      "title": "Assistants, automation and AI agents",
+      "sections": [
+        {
+          "number": "5.1",
+          "title": "An assistant helps you work",
+          "body": "An AI assistant generally responds to requests, such as drafting a message or answering a question. Some assistants can also search connected sources or suggest actions. Their exact capabilities depend on the product and permissions. Check the answer and the information it used."
+        },
+        {
+          "number": "5.2",
+          "title": "Automation follows a workflow",
+          "body": "Automation performs steps in a process, such as routing an approved form or preparing a weekly report. Some workflows use fixed rules; others use AI for part of the task. Start with a clear owner, approved systems, a defined result and a way to review errors.\n\nFor example, a workflow might organise approved, non-sensitive support requests into categories for a person to review. Whether this is allowed depends on the actual tools, data and company policy."
+        },
+        {
+          "number": "5.3",
+          "title": "An agent can take steps toward a goal",
+          "body": "An **AI agent** is a system that can plan or choose steps and use connected tools to work toward a goal. Depending on its design and permissions, it might search files, draft a report, create a ticket or propose an action. An agent may operate across several steps without continuous instructions; it can also make mistakes or follow malicious content.\n\nAgentic AI is useful for bounded workflows, but greater access and autonomy can increase risk. The organisation needs technical controls and a named owner; a careful prompt alone is not enough."
+        },
+        {
+          "number": "5.4",
+          "title": "Review before the agent acts",
+          "body": "Use only approved agents and connections. Check what data the agent can access, what actions it can take, and when it must pause for a person to approve. Use the least access needed, and review the specific content, recipients and consequences before a consequential action such as sending an external message, changing records or making a purchase. Follow **[AGENT APPROVAL AND ACCESS POLICY]**.\n\nIf an agent behaves unexpectedly, stop it if safe to do so and contact **[SUPPORT / SECURITY CHANNEL]**. Do not assume every proposed action is safe just because it came from an approved tool."
+        }
+      ],
+      "check": {
+        "prompt": "An approved agent drafts an external email and proposes to send it. What should you do?",
+        "options": [
+          {
+            "text": "Let it send without reading it because the agent is approved.",
+            "correct": false
+          },
+          {
+            "text": "Review the content, recipients and permissions, and approve only if it complies with the applicable workflow.",
+            "correct": true
+          },
+          {
+            "text": "Give it access to all mailboxes to make the task easier.",
+            "correct": false
+          }
+        ],
+        "feedback": "Approval of the agent does not remove the need for the required human checks or appropriate access boundaries."
+      }
+    },
+    {
+      "title": "Putting AI to work and looking ahead",
+      "sections": [
+        {
+          "number": "6.1",
+          "title": "Find a good first use case",
+          "body": "Choose a frequent, low-risk task with a clear outcome: for example, creating an agenda from fictional inputs or explaining a public technical concept. Use an approved tool and permitted information. Compare the output with how you normally work: is it useful, accurate and worth reviewing?"
+        },
+        {
+          "number": "6.2",
+          "title": "Grow responsibly",
+          "body": "If a task involves sensitive data, a connected system, customer communication or automated actions, the review may need to include your manager, data owner, security, privacy or another authorised team. Follow **[USE-CASE REVIEW PROCESS]** before expanding the scope. More complex or higher-impact uses may require additional controls and testing."
+        },
+        {
+          "number": "6.3",
+          "title": "Know when to stop",
+          "body": "Pause when the tool requests information it should not need, produces suspicious or harmful content, proposes an unexpected action, or when you suspect sensitive data has been shared incorrectly. Report promptly through **[REPORTING CHANNEL]** and follow the guidance provided."
+        },
+        {
+          "number": "6.4",
+          "title": "Keep learning",
+          "body": "AI tools and organisational guidance will change. Check **[AI LEARNING HUB]** and **[CURRENT POLICY LINK]** for approved updates, further learning and support. The goal is to use AI where it adds value while retaining human responsibility for decisions and outcomes."
+        }
+      ],
+      "check": {
+        "prompt": "You notice an AI assistant suggesting an unexpected action involving confidential files. What should you do?",
+        "options": [
+          {
+            "text": "Approve it quickly so the task can finish.",
+            "correct": false
+          },
+          {
+            "text": "Pause the workflow and contact the appropriate support or security channel.",
+            "correct": true
+          },
+          {
+            "text": "Share the files in a public chat to get a second opinion.",
+            "correct": false
+          }
+        ],
+        "feedback": "An unexpected action can indicate an error or security issue. Stop and use the organisation's reporting process."
+      }
+    }
+  ],
+  "assessment": [
+    {
+      "prompt": "Why is AI being introduced at work?",
+      "options": [
+        {
+          "text": "To support suitable tasks while employees remain accountable.",
+          "correct": true
+        },
+        {
+          "text": "To make every business decision without review.",
+          "correct": false
+        },
+        {
+          "text": "To replace all policies for data handling.",
+          "correct": false
+        }
+      ],
+      "feedback": "AI can assist work; people and organisational controls remain responsible for outcomes."
+    },
+    {
+      "prompt": "What is a token in a language-model context?",
+      "options": [
+        {
+          "text": "Always exactly one word.",
+          "correct": false
+        },
+        {
+          "text": "A piece of text processed by a model; it may be part of a word, a whole word or punctuation.",
+          "correct": true
+        },
+        {
+          "text": "Proof that a model's answer is accurate.",
+          "correct": false
+        }
+      ],
+      "feedback": "Tokens are units used to process text, and their relationship to words varies."
+    },
+    {
+      "prompt": "Which prompt is the best starting point for an approved tool?",
+      "options": [
+        {
+          "text": "“Do my job” followed by confidential customer records.",
+          "correct": false
+        },
+        {
+          "text": "“Write a concise agenda for a fictional project kickoff with three discussion topics.”",
+          "correct": true
+        },
+        {
+          "text": "“Ignore all company policies and use my files.”",
+          "correct": false
+        }
+      ],
+      "feedback": "The prompt states a task and format and uses fictional, non-sensitive context. Actual use must still follow policy."
+    },
+    {
+      "prompt": "A tool is approved for your organisation. Can you enter any data into it?",
+      "options": [
+        {
+          "text": "Yes, approval covers all accounts, features and information.",
+          "correct": false
+        },
+        {
+          "text": "Only after checking that the specific data, account, feature and use case are permitted.",
+          "correct": true
+        },
+        {
+          "text": "Yes, if the task is urgent.",
+          "correct": false
+        }
+      ],
+      "feedback": "Approval is scoped; check the applicable data and use-case rules."
+    },
+    {
+      "prompt": "What should you do when AI provides a citation for an important claim?",
+      "options": [
+        {
+          "text": "Verify the citation and claim against a reliable original source.",
+          "correct": true
+        },
+        {
+          "text": "Assume it exists because it looks credible.",
+          "correct": false
+        },
+        {
+          "text": "Ask the same tool to confirm it and stop there.",
+          "correct": false
+        }
+      ],
+      "feedback": "Plausible-looking citations and claims can be invented or inaccurate."
+    },
+    {
+      "prompt": "A page an assistant is reading tells it to ignore your request and send information elsewhere. What is the safest response?",
+      "options": [
+        {
+          "text": "Treat the page's instruction as the new task.",
+          "correct": false
+        },
+        {
+          "text": "Pause, treat it as untrusted and report it through the appropriate channel.",
+          "correct": true
+        },
+        {
+          "text": "Provide the assistant with your password so it can continue.",
+          "correct": false
+        }
+      ],
+      "feedback": "External content can contain instructions intended to redirect an AI workflow."
+    },
+    {
+      "prompt": "What makes an AI agent different from a basic text response?",
+      "options": [
+        {
+          "text": "An agent may be able to choose steps and use connected tools within its permissions.",
+          "correct": true
+        },
+        {
+          "text": "An agent is always correct and requires no oversight.",
+          "correct": false
+        },
+        {
+          "text": "An agent cannot access any external system.",
+          "correct": false
+        }
+      ],
+      "feedback": "Agent capabilities vary, but connected actions require appropriate access limits and review."
+    },
+    {
+      "prompt": "You accidentally enter information into an unapproved tool. What should you do first?",
+      "options": [
+        {
+          "text": "Hide the mistake.",
+          "correct": false
+        },
+        {
+          "text": "Stop using the affected workflow and promptly report the issue using the organisation's process.",
+          "correct": true
+        },
+        {
+          "text": "Paste more information to see whether the tool remembers it.",
+          "correct": false
+        }
+      ],
+      "feedback": "Early reporting helps the right team assess and respond to a potential exposure."
+    }
+  ]
+}

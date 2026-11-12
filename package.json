@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build-content": "node scripts/build-course-content.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "start": "next start",
     "lint": "eslint"
   },
@@ -21,6 +24,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
+    "prettier": "^3.10.1",
     "tailwindcss": "4.3.3",
     "typescript": "^5"
   }
