@@ -1,0 +1,29 @@
+[
+  {
+    "id": "ai-at-work",
+    "title": "AI at Work: Foundations, Safe Use and What's Next",
+    "description": "Learn how to use AI confidently, protect information, and make responsible decisions at work.",
+    "duration": "About 39 minutes",
+    "due": "Due 22 Nov 2026",
+    "status": "dueSoon",
+    "kind": "Online course"
+  },
+  {
+    "id": "phishing",
+    "title": "Recognising Phishing",
+    "description": "Spot suspicious messages before they become an incident.",
+    "duration": "8 minutes",
+    "due": "Due 29 Nov 2026",
+    "status": "dueSoon",
+    "kind": "Preview course"
+  },
+  {
+    "id": "data-handling",
+    "title": "Data Handling Essentials",
+    "description": "A concise refresher on classifying and protecting work information.",
+    "duration": "15 minutes",
+    "due": "Available 1 Dec 2026",
+    "status": "scheduled",
+    "kind": "Online course"
+  }
+]
