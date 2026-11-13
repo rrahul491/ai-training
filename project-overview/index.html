@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,7 +18,9 @@
         --danger: #f87171;
         --line: #22314e;
       }
-      * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
       body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
@@ -35,7 +37,7 @@
         border: 1px solid var(--line);
         border-radius: 20px;
         padding: 28px;
-        box-shadow: 0 18px 40px rgba(0,0,0,0.2);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
       }
       h1 {
         margin: 0 0 12px;
@@ -60,9 +62,21 @@
         letter-spacing: 0.08em;
         text-transform: uppercase;
       }
-      .tag.primary { background: rgba(94,234,212,0.12); color: var(--accent); border: 1px solid rgba(94,234,212,0.3); }
-      .tag.secondary { background: rgba(125,211,252,0.12); color: var(--accent-2); border: 1px solid rgba(125,211,252,0.3); }
-      .tag.success { background: rgba(52,211,153,0.12); color: var(--success); border: 1px solid rgba(52,211,153,0.3); }
+      .tag.primary {
+        background: rgba(94, 234, 212, 0.12);
+        color: var(--accent);
+        border: 1px solid rgba(94, 234, 212, 0.3);
+      }
+      .tag.secondary {
+        background: rgba(125, 211, 252, 0.12);
+        color: var(--accent-2);
+        border: 1px solid rgba(125, 211, 252, 0.3);
+      }
+      .tag.success {
+        background: rgba(52, 211, 153, 0.12);
+        color: var(--success);
+        border: 1px solid rgba(52, 211, 153, 0.3);
+      }
       .grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -70,7 +84,7 @@
         margin-top: 28px;
       }
       .card {
-        background: rgba(16,27,45,0.9);
+        background: rgba(16, 27, 45, 0.9);
         border: 1px solid var(--line);
         border-radius: 18px;
         padding: 20px;
@@ -85,7 +99,7 @@
         border-radius: 12px;
         padding: 12px 14px;
         border: 1px solid var(--line);
-        background: rgba(19,32,52,0.9);
+        background: rgba(19, 32, 52, 0.9);
       }
       .status-box strong {
         display: block;
@@ -100,10 +114,26 @@
         letter-spacing: 0.08em;
         text-transform: uppercase;
       }
-      .chip.green { background: rgba(52,211,153,0.12); color: var(--success); border: 1px solid rgba(52,211,153,0.3); }
-      .chip.blue { background: rgba(125,211,252,0.12); color: var(--accent-2); border: 1px solid rgba(125,211,252,0.3); }
-      .chip.amber { background: rgba(251,191,36,0.12); color: var(--warning); border: 1px solid rgba(251,191,36,0.3); }
-      .chip.red { background: rgba(248,113,113,0.12); color: var(--danger); border: 1px solid rgba(248,113,113,0.3); }
+      .chip.green {
+        background: rgba(52, 211, 153, 0.12);
+        color: var(--success);
+        border: 1px solid rgba(52, 211, 153, 0.3);
+      }
+      .chip.blue {
+        background: rgba(125, 211, 252, 0.12);
+        color: var(--accent-2);
+        border: 1px solid rgba(125, 211, 252, 0.3);
+      }
+      .chip.amber {
+        background: rgba(251, 191, 36, 0.12);
+        color: var(--warning);
+        border: 1px solid rgba(251, 191, 36, 0.3);
+      }
+      .chip.red {
+        background: rgba(248, 113, 113, 0.12);
+        color: var(--danger);
+        border: 1px solid rgba(248, 113, 113, 0.3);
+      }
       ul {
         padding-left: 18px;
         margin: 0;
@@ -112,12 +142,12 @@
       }
       .stack-grid {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0,1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 12px;
         margin-top: 10px;
       }
       .stack-item {
-        background: rgba(21,39,62,0.9);
+        background: rgba(21, 39, 62, 0.9);
         border: 1px solid var(--line);
         border-radius: 12px;
         padding: 12px;
@@ -126,12 +156,12 @@
       }
       .phase-list {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0,1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
         margin-top: 18px;
       }
       .phase-item {
-        background: rgba(16,27,45,0.9);
+        background: rgba(16, 27, 45, 0.9);
         border: 1px solid var(--line);
         border-radius: 12px;
         padding: 14px 16px;
@@ -142,16 +172,20 @@
         align-items: center;
         margin-bottom: 8px;
       }
-      .phase-item strong { font-size: 13px; }
-      .phase-item small { color: var(--muted); }
+      .phase-item strong {
+        font-size: 13px;
+      }
+      .phase-item small {
+        color: var(--muted);
+      }
       .service-grid {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0,1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
         margin-top: 14px;
       }
       .service-item {
-        background: rgba(18,31,48,0.95);
+        background: rgba(18, 31, 48, 0.95);
         border: 1px solid var(--line);
         border-radius: 12px;
         padding: 14px 16px;
@@ -170,7 +204,12 @@
         margin-top: 28px;
       }
       @media (max-width: 900px) {
-        .grid, .stack-grid, .phase-list, .service-grid { grid-template-columns: 1fr; }
+        .grid,
+        .stack-grid,
+        .phase-list,
+        .service-grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -179,7 +218,9 @@
       <div class="header">
         <h1>AegisAI — Interactive AI Training Module</h1>
         <p class="subtext">
-          This project focuses on an interactive, enterprise-grade AI training platform for employees, making learning feel like a modern guided experience rather than a static compliance course.
+          This project focuses on an interactive, enterprise-grade AI training platform for
+          employees, making learning feel like a modern guided experience rather than a static
+          compliance course.
         </p>
         <div class="tag-row">
           <span class="tag primary">Project status: Day 1–2 complete</span>
@@ -235,7 +276,10 @@
       <section class="section">
         <div class="card">
           <h2>Delivery log</h2>
-          <p class="subtext">The detailed Day 1–2 record, merge milestone and agreed next-session focus are kept in <a href="PROGRESS_LOG.md" style="color: var(--accent);">PROGRESS_LOG.md</a>.</p>
+          <p class="subtext">
+            The detailed Day 1–2 record, merge milestone and agreed next-session focus are kept in
+            <a href="PROGRESS_LOG.md" style="color: var(--accent)">PROGRESS_LOG.md</a>.
+          </p>
         </div>
       </section>
 
@@ -260,10 +304,17 @@
           <h2>Architecture overview</h2>
           <ul>
             <li><strong>Frontend:</strong> learner experience, dashboards, course player.</li>
-            <li><strong>Content layer:</strong> course schema, modules, lessons, pages, interactions.</li>
-            <li><strong>API layer:</strong> course fetch, progress save, assessment submit, admin actions.</li>
+            <li>
+              <strong>Content layer:</strong> course schema, modules, lessons, pages, interactions.
+            </li>
+            <li>
+              <strong>API layer:</strong> course fetch, progress save, assessment submit, admin
+              actions.
+            </li>
             <li><strong>Security:</strong> auth, RBAC, tenant isolation, audit logs.</li>
-            <li><strong>Data:</strong> course metadata, attempts, results, completions, certificates.</li>
+            <li>
+              <strong>Data:</strong> course metadata, attempts, results, completions, certificates.
+            </li>
             <li><strong>Media:</strong> narration, transcripts, videos, downloadable assets.</li>
           </ul>
         </div>
@@ -325,27 +376,45 @@
           <div class="service-grid">
             <div class="service-item">
               <strong>Course Service</strong>
-              <p>Handles course metadata, modules, lesson definitions, page content, and versioning policy.</p>
+              <p>
+                Handles course metadata, modules, lesson definitions, page content, and versioning
+                policy.
+              </p>
             </div>
             <div class="service-item">
               <strong>Assignment Service</strong>
-              <p>Assigns mandatory training to employees, teams, departments, or roles and tracks deadlines.</p>
+              <p>
+                Assigns mandatory training to employees, teams, departments, or roles and tracks
+                deadlines.
+              </p>
             </div>
             <div class="service-item">
               <strong>Progress Service</strong>
-              <p>Stores page completion, resume state, lesson state, and interaction progress for each learner.</p>
+              <p>
+                Stores page completion, resume state, lesson state, and interaction progress for
+                each learner.
+              </p>
             </div>
             <div class="service-item">
               <strong>Assessment Service</strong>
-              <p>Validates answers, scores attempts, enforces retry logic, and records pass/fail outcomes.</p>
+              <p>
+                Validates answers, scores attempts, enforces retry logic, and records pass/fail
+                outcomes.
+              </p>
             </div>
             <div class="service-item">
               <strong>Certificate Service</strong>
-              <p>Checks completion rules and issues, renews, or revokes certificates with audit logging.</p>
+              <p>
+                Checks completion rules and issues, renews, or revokes certificates with audit
+                logging.
+              </p>
             </div>
             <div class="service-item">
               <strong>Audit Service</strong>
-              <p>Captures privileged actions, publishing events, grading, and evidence-related changes.</p>
+              <p>
+                Captures privileged actions, publishing events, grading, and evidence-related
+                changes.
+              </p>
             </div>
           </div>
         </div>
@@ -370,9 +439,13 @@
           <h2>Key notes</h2>
           <ul>
             <li>This is a prototype-first approach, not the final enterprise LMS.</li>
-            <li>We are validating experience, structure, and reusability before broad admin expansion.</li>
+            <li>
+              We are validating experience, structure, and reusability before broad admin expansion.
+            </li>
             <li>Security and assessment integrity remain server-side responsibilities.</li>
-            <li>Future phases will add reporting, certificates, RBAC, and enterprise rollout features.</li>
+            <li>
+              Future phases will add reporting, certificates, RBAC, and enterprise rollout features.
+            </li>
           </ul>
         </div>
       </section>
