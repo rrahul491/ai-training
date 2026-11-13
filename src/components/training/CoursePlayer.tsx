@@ -1,6 +1,7 @@
 "use client";
 
 import { startTransition, useEffect, useState } from "react";
+import Image from "next/image";
 import {
   ArrowLeft,
   ArrowRight,
@@ -15,6 +16,7 @@ import {
 } from "lucide-react";
 import course from "@/lib/course-content.generated.json";
 import { DEMO_PROGRESS_KEY, courseProgress } from "@/lib/training-course";
+import { getSectionMedia } from "@/config/section-media";
 import { useNarration } from "@/hooks/useNarration";
 import type { Progress } from "@/types/training";
 import type { ContentProps, CoursePlayerProps, RichTextProps } from "@/types/components";
@@ -97,6 +99,7 @@ export function CoursePlayer({ onClose }: CoursePlayerProps = {}) {
   const allCurrentSectionsViewed =
     current !== null &&
     current.sections.every((_, index) => progress.viewed.includes(`${progress.module}.${index}`));
+  const selectedSectionMedia = getSectionMedia(progress.module, progress.page);
   const completed = courseProgress(progress);
   const unlocked = progress.checks.length;
   const narrationText =
@@ -387,6 +390,13 @@ export function CoursePlayer({ onClose }: CoursePlayerProps = {}) {
                         >
                           <span className="learning-card-inner">
                             <span className="learning-card-face learning-card-front">
+                              <Image
+                                className="learning-card-image"
+                                src={getSectionMedia(progress.module, index).src}
+                                alt=""
+                                fill
+                                sizes="(max-width: 700px) 100vw, 420px"
+                              />
                               <span className="learning-card-number">{section.number}</span>
                               <strong>{section.title}</strong>
                               <span className="learning-card-prompt">
@@ -420,12 +430,27 @@ export function CoursePlayer({ onClose }: CoursePlayerProps = {}) {
                 </div>
               )}
               {current && !isCheck && !isCardModule && (
-                <div className="course-panel">
-                  <div className="course-kicker">
-                    MODULE {progress.module + 1} · SECTION {progress.page + 1} OF 4
+                <div
+                  className={`course-panel course-panel-with-media is-${selectedSectionMedia.layout}-media`}
+                >
+                  <div className="course-copy-column">
+                    <div className="course-kicker">
+                      MODULE {progress.module + 1} · SECTION {progress.page + 1} OF 4
+                    </div>
+                    <h2>{current.sections[progress.page].title}</h2>
+                    <Content body={current.sections[progress.page].body} />
                   </div>
-                  <h2>{current.sections[progress.page].title}</h2>
-                  <Content body={current.sections[progress.page].body} />
+                  <figure
+                    key={`${progress.module}-${progress.page}`}
+                    className="course-section-media"
+                  >
+                    <Image
+                      src={selectedSectionMedia.src}
+                      alt={selectedSectionMedia.alt}
+                      fill
+                      sizes="(max-width: 700px) 100vw, 45vw"
+                    />
+                  </figure>
                 </div>
               )}
               {current && isCheck && (

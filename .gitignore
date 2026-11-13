@@ -13,11 +13,10 @@
 # testing
 /coverage
 
-# Local documentation and reference material
+# Local reference material
 /docs/
 /ref/
 /ref-img/
-/project-overview/
 
 # next.js
 /.next/
