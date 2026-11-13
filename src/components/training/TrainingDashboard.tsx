@@ -5,8 +5,8 @@ import copy from "@/locales/en-us.json";
 import { formatMessage } from "@/lib/format-message";
 import { courseProgress, DEMO_PROGRESS_KEY } from "@/lib/training-course";
 import { trainingCards } from "@/mocks/training-cards";
-import type { TrainingCard, TrainingStatus } from "@/types/training";
-import type { CourseDetailProps, CourseRowProps, TrainingDashboardProps } from "@/types/components";
+import type { TrainingStatus } from "@/types/training";
+import type { CourseRowProps, TrainingDashboardProps } from "@/types/components";
 
 const text = copy.DASHBOARD;
 const primaryCourseId = "ai-at-work";
@@ -41,7 +41,6 @@ function Emblem() {
 }
 
 export function TrainingDashboard({ onStart }: TrainingDashboardProps) {
-  const [selected, setSelected] = useState<TrainingCard | null>(null);
   const [query, setQuery] = useState("");
   const [progress, setProgress] = useState(0);
   const [filter, setFilter] = useState<"all" | TrainingStatus>("all");
@@ -182,11 +181,7 @@ export function TrainingDashboard({ onStart }: TrainingDashboardProps) {
           </div>
           <div>
             {filtered.map((course) => (
-              <CourseRow
-                key={course.id}
-                course={course}
-                onOpen={() => (course.id === primaryCourseId ? onStart() : setSelected(course))}
-              />
+              <CourseRow key={course.id} course={course} onOpen={() => onStart(course.id)} />
             ))}
             {filtered.length === 0 && (
               <p className="px-5 py-10 text-center text-sm text-slate-500" role="status">
@@ -197,14 +192,12 @@ export function TrainingDashboard({ onStart }: TrainingDashboardProps) {
         </section>
         <p className="mt-5 text-xs text-slate-500">{text.PERSONAL_RECORD_NOTICE}</p>
       </div>
-      {selected && <CourseDetail course={selected} onClose={() => setSelected(null)} />}
     </main>
   );
 }
 
 function CourseRow({ course, onOpen }: CourseRowProps) {
-  const action =
-    course.id !== primaryCourseId ? text.DETAILS : course.progress ? text.RESUME : text.LAUNCH;
+  const action = course.progress ? text.RESUME : text.LAUNCH;
   return (
     <article className="grid gap-4 border-b border-slate-100 px-5 py-5 last:border-0 md:grid-cols-[minmax(0,1fr)_150px_145px_120px] md:items-center">
       <div className="flex gap-4">
@@ -242,55 +235,5 @@ function CourseRow({ course, onOpen }: CourseRowProps) {
         </button>
       </div>
     </article>
-  );
-}
-
-function CourseDetail({ course, onClose }: CourseDetailProps) {
-  return (
-    <div className="fixed inset-0 z-20 grid place-items-center bg-slate-950/45 p-4">
-      <section
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="course-detail-title"
-        className="w-full max-w-lg rounded-xl bg-white p-6 shadow-2xl"
-      >
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[.14em] text-[#0878b9]">
-              {text.COURSE_DETAILS}
-            </p>
-            <h2 id="course-detail-title" className="mt-2 text-2xl font-semibold text-slate-900">
-              {course.title}
-            </h2>
-          </div>
-          <button
-            onClick={onClose}
-            aria-label={text.CLOSE_COURSE_DETAILS}
-            className="rounded p-1 text-slate-500 hover:bg-slate-100"
-          >
-            ✕
-          </button>
-        </div>
-        <p className="mt-4 leading-6 text-slate-600">{course.description}</p>
-        <div className="mt-5 grid grid-cols-2 gap-3">
-          <div className="rounded-lg bg-slate-50 p-3">
-            <p className="text-xs text-slate-500">{text.DURATION}</p>
-            <p className="mt-1 font-semibold">{course.duration}</p>
-          </div>
-          <div className="rounded-lg bg-slate-50 p-3">
-            <p className="text-xs text-slate-500">{text.SCHEDULE}</p>
-            <p className="mt-1 font-semibold">{course.due}</p>
-          </div>
-        </div>
-        <div className="mt-6 flex justify-end">
-          <button
-            onClick={onClose}
-            className="rounded-md border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700"
-          >
-            {text.CLOSE}
-          </button>
-        </div>
-      </section>
-    </div>
   );
 }

@@ -32,3 +32,9 @@
 - Finish the migration of remaining legacy player UI labels to uppercase locale enum keys.
 - Expand reusable interaction patterns for the remaining modules.
 - Begin the next agreed prototype capability after UX review.
+
+## Catalogue expansion — design ready
+
+- Added design blueprints for **Recognising Phishing** and **Data Handling Essentials**.
+- Both use the established six-module course pattern, including four sections per module, a module check, media direction, accessibility requirements, and an eight-question final assessment.
+- The blueprints are ready to be turned into locale-backed course content and connected to the existing player in a future implementation phase.

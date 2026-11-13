@@ -14,8 +14,8 @@ import {
   Volume2,
   VolumeX,
 } from "lucide-react";
-import course from "@/lib/course-content.generated.json";
 import { DEMO_PROGRESS_KEY, courseProgress } from "@/lib/training-course";
+import { getCourse } from "@/mocks/course-catalog";
 import { getSectionMedia } from "@/config/section-media";
 import { useNarration } from "@/hooks/useNarration";
 import type { Progress } from "@/types/training";
@@ -80,7 +80,9 @@ function CardContent({ body }: ContentProps) {
   );
 }
 
-export function CoursePlayer({ onClose }: CoursePlayerProps = {}) {
+export function CoursePlayer({ courseId, onClose }: CoursePlayerProps) {
+  const course = getCourse(courseId);
+  const progressKey = `${DEMO_PROGRESS_KEY}-${courseId}`;
   const [progress, setProgress] = useState<Progress>(initialProgress);
   const [loaded, setLoaded] = useState(false);
   const [choice, setChoice] = useState<number | null>(null);
@@ -116,7 +118,7 @@ export function CoursePlayer({ onClose }: CoursePlayerProps = {}) {
 
   useEffect(() => {
     try {
-      const saved = JSON.parse(localStorage.getItem(DEMO_PROGRESS_KEY) || "null");
+      const saved = JSON.parse(localStorage.getItem(progressKey) || "null");
       if (
         saved &&
         Number.isInteger(saved.module) &&
@@ -145,17 +147,17 @@ export function CoursePlayer({ onClose }: CoursePlayerProps = {}) {
       /* Keep working if storage is unavailable. */
     }
     startTransition(() => setLoaded(true));
-  }, []);
+  }, [course.modules.length, progressKey]);
 
   useEffect(() => {
     if (loaded) {
       try {
-        localStorage.setItem(DEMO_PROGRESS_KEY, JSON.stringify(progress));
+        localStorage.setItem(progressKey, JSON.stringify(progress));
       } catch {
         /* Progress remains in memory. */
       }
     }
-  }, [loaded, progress]);
+  }, [loaded, progress, progressKey]);
   useEffect(() => {
     if (!expanded) return;
     const close = (event: KeyboardEvent) => {
@@ -389,7 +391,10 @@ export function CoursePlayer({ onClose }: CoursePlayerProps = {}) {
                           aria-label={`${flipped ? "Close" : "Open"} section ${section.number}: ${section.title}${viewed ? ", completed" : ""}`}
                         >
                           <span className="learning-card-inner">
-                            <span className="learning-card-face learning-card-front">
+                            <span
+                              className="learning-card-face learning-card-front"
+                              style={{ position: "relative" }}
+                            >
                               <Image
                                 className="learning-card-image"
                                 src={getSectionMedia(progress.module, index).src}

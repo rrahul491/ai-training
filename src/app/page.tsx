@@ -5,10 +5,10 @@ import { CoursePlayer } from "@/components/training/CoursePlayer";
 import { TrainingDashboard } from "@/components/training/TrainingDashboard";
 
 export default function Home() {
-  const [showPlayer, setShowPlayer] = useState(false);
-  return showPlayer ? (
-    <CoursePlayer onClose={() => setShowPlayer(false)} />
+  const [activeCourseId, setActiveCourseId] = useState<string | null>(null);
+  return activeCourseId ? (
+    <CoursePlayer courseId={activeCourseId} onClose={() => setActiveCourseId(null)} />
   ) : (
-    <TrainingDashboard onStart={() => setShowPlayer(true)} />
+    <TrainingDashboard onStart={setActiveCourseId} />
   );
 }
